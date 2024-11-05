@@ -25,7 +25,7 @@ public class BudgetView {
     public String getTransactionDescription() {
         System.out.print("Enter description: ");
         scanner.nextLine(); // Consume newline
-        return scanner.nextLine();
+        return scanner.nextLine().trim(); // Trim whitespace
     }
 
     public double getTransactionAmount() {
@@ -34,7 +34,7 @@ public class BudgetView {
     }
 
     public void displayBalance(double balance) {
-        System.out.println("Current balance: $" + balance);
+        System.out.printf("Current balance: $%.2f\n", balance);
     }
 
     public void displayTransactions(List<Transaction> transactions) {
@@ -48,6 +48,15 @@ public class BudgetView {
         }
     }
 
+    public int getStrategyChoice() {
+        System.out.println("\nSelect Balance Strategy:");
+        System.out.println("1. Simple Balance");
+        System.out.println("2. Projected Balance");
+        System.out.println("3. Category Summary");
+        System.out.print("Enter choice (1-3): ");
+        return scanner.nextInt();
+    }
+
     public void displayExitMessage() {
         System.out.println("Exiting...");
     }
@@ -56,4 +65,3 @@ public class BudgetView {
         System.out.println("Invalid option. Please try again.");
     }
 }
-

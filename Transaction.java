@@ -2,7 +2,7 @@ package Model;
 
 
 public class Transaction {
-    protected String description;
+    public String description;
     protected double amount;
 
     public Transaction(String description, double amount) {
