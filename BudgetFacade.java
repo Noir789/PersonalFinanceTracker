@@ -20,12 +20,8 @@ public class BudgetFacade {
         tracker.addExpense(description, amount);
     }
 
-    public double getBalance() {
-        return tracker.getBalance();
-    }
 
     public List<Transaction> getTransactions() {
         return tracker.getTransactions();
     }
 }
-

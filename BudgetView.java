@@ -33,6 +33,16 @@ public class BudgetView {
         return scanner.nextDouble();
     }
 
+    public int getDecoratorChoice() {
+        System.out.println("\nWould you like to apply any decorator to this transaction?");
+        System.out.println("1. Recurring Income");
+        System.out.println("2. High Value Transaction");
+        System.out.println("3. No Decorator");
+        System.out.print("Choose an option: ");
+        return scanner.nextInt();
+    }
+
+
     public void displayBalance(double balance) {
         System.out.printf("Current balance: $%.2f\n", balance);
     }

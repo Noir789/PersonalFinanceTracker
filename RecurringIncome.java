@@ -2,7 +2,7 @@ package Decorator;
 
 import Model.Transaction;
 
-class RecurringIncome extends TransactionDecorator {
+public class RecurringIncome extends TransactionDecorator {
     public RecurringIncome(Transaction transaction) {
         super(transaction);
     }
